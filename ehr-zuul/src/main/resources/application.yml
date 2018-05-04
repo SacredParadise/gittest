@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ehr-zuul
+zuul:
+  routes:
+    budget:
+      path: /finance/*
+      serviceId: finance-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
